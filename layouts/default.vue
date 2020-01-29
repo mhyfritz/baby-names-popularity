@@ -5,7 +5,10 @@
         Baby names
       </v-toolbar-title>
       <v-spacer />
-      <a href="https://github.com/mhyfritz/baby-names-app" target="_blank">
+      <a
+        href="https://github.com/mhyfritz/baby-names-popularity"
+        target="_blank"
+      >
         <i class="fa fa-github-alt" />
       </a>
     </v-app-bar>
