@@ -40,13 +40,17 @@
       ></v-select>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col cols="12" lg="6">
         <div ref="chart"></div>
       </v-col>
-      <v-col>
-        <v-row align="end">
-          <v-col md="auto">
-            <v-btn @click="selected.rows = []" small outlined
+      <v-col cols="12" lg="6">
+        <v-row align="end" dense>
+          <v-col class="flex-grow-0">
+            <v-btn
+              @click="selected.rows = []"
+              :disabled="selected.rows.length === 0"
+              small
+              outlined
               >Unselect all</v-btn
             >
           </v-col>
@@ -66,6 +70,9 @@
           dense
           show-select
           :search="search"
+          :footer-props="{
+            'items-per-page-options': [10, 25, 50, 100, -1]
+          }"
           v-model="selected.rows"
           :headers="tableHeaders"
           :items="subsetByYear"
