@@ -41,13 +41,23 @@
     </v-row>
     <v-row>
       <v-col>
-        <v-text-field
-          v-model="search"
-          append-icon="fa-search"
-          label="Search"
-          single-line
-          hide-details
-        ></v-text-field>
+        <v-row align="end">
+          <v-col md="auto">
+            <v-btn @click="selected.rows = []" small outlined
+              >Unselect all</v-btn
+            >
+          </v-col>
+          <v-col>
+            <v-text-field
+              v-model="search"
+              append-icon="fa-search"
+              label="Search"
+              single-line
+              hide-details
+            />
+          </v-col>
+        </v-row>
+
         <v-data-table
           class="table"
           dense
