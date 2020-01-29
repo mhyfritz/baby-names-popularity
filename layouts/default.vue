@@ -2,7 +2,7 @@
   <v-app dark>
     <v-app-bar fixed app>
       <v-toolbar-title>
-        Baby names
+        Popularity of baby names
       </v-toolbar-title>
       <v-spacer />
       <a
