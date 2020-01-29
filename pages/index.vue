@@ -41,6 +41,9 @@
     </v-row>
     <v-row>
       <v-col>
+        <div ref="chart"></div>
+      </v-col>
+      <v-col>
         <v-row align="end">
           <v-col md="auto">
             <v-btn @click="selected.rows = []" small outlined
@@ -68,9 +71,6 @@
           :items="subsetByYear"
           item-key="name"
         />
-      </v-col>
-      <v-col>
-        <div ref="chart"></div>
       </v-col>
     </v-row>
   </v-container>
