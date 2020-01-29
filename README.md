@@ -1,4 +1,4 @@
-[![GitHub Actions status | mhyfritz/baby-names-popularity](https://github.com/mhyfritz/baby-names-popularity/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/mhyfritzbaby-names-popularity/actions?query=workflow%3A%22Deploy+to+GitHub+Pages%22)
+[![GitHub Actions status | mhyfritz/baby-names-popularity](https://github.com/mhyfritz/baby-names-popularity/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/mhyfritz/baby-names-popularity/actions?query=workflow%3A%22Deploy+to+GitHub+Pages%22)
 
 # Popularity of German baby names
 
