@@ -8,9 +8,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "build": "cross-env BASE_URL=/baby-names-popularity/ nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "cross-env BASE_URL=/baby-names-popularity/ nuxt generate"
   },
   "dependencies": {
     "baby-names-cologne": "^2018.0.4",
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@nuxtjs/font-awesome": "^1.0.4",
     "@nuxtjs/vuetify": "^1.0.0",
+    "cross-env": "^7.0.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.16.4"
