@@ -41,6 +41,12 @@
     </v-row>
     <v-row>
       <v-col cols="12" lg="6">
+        <v-btn @click="toggleChartTheme" text>
+          <i
+            class="fa"
+            :class="chartTheme === 'dark' ? 'fa-sun-o' : 'fa-moon-o'"
+          />
+        </v-btn>
         <div ref="chart"></div>
       </v-col>
       <v-col cols="12" lg="6">
@@ -103,7 +109,8 @@ export default {
         { text: 'Name', value: 'name' },
         { text: 'Rank', value: 'rank' },
         { text: 'Count', value: 'count' }
-      ]
+      ],
+      chartTheme: 'dark'
     }
   },
   computed: {
@@ -119,6 +126,10 @@ export default {
   methods: {
     init() {
       this.selected.rows = [this.subsetByYear[0], this.subsetByYear[1]]
+    },
+    toggleChartTheme() {
+      this.chartTheme = this.chartTheme === 'dark' ? 'light' : 'dark'
+      this.renderChart()
     },
     renderChart() {
       const data = this.selected.rows.map(row => ({
@@ -148,6 +159,12 @@ export default {
           range: [this.rankExtent[1], 0],
           zeroline: false
         }
+      }
+
+      if (this.chartTheme === 'dark') {
+        layout.xaxis.gridcolor = layout.yaxis.gridcolor = '#555'
+        layout.plot_bgcolor = layout.paper_bgcolor = '#000'
+        layout.font = { color: '#fff' }
       }
 
       const config = { displaylogo: false }
