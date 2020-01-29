@@ -1,0 +1,26 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install packages
+        run: npm install
+
+      - name: Build and deploy
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        run: ./deploy.sh
