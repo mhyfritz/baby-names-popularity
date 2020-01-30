@@ -152,6 +152,7 @@ export default {
 
       const layout = {
         title: 'Popularity over the years',
+        showlegend: true, // show legend for single name as well
         xaxis: {
           title: 'Year',
           zeroline: false,
