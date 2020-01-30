@@ -152,18 +152,21 @@ export default {
         xaxis: {
           title: 'Year',
           zeroline: false,
-          range: [this.years[0] - 1, this.years[this.years.length - 1] + 1]
+          range: [this.years[0] - 1, this.years[this.years.length - 1] + 1],
+          gridcolor: '#ccc'
         },
         yaxis: {
           title: 'Rank',
           range: [this.rankExtent[1], 0],
-          zeroline: false
+          gridcolor: '#ccc',
+          zerolinecolor: '#ccc'
         }
       }
 
       if (this.chartTheme === 'dark') {
-        layout.xaxis.gridcolor = layout.yaxis.gridcolor = '#555'
-        layout.plot_bgcolor = layout.paper_bgcolor = '#000'
+        layout.xaxis.gridcolor = layout.yaxis.gridcolor = layout.yaxis.zerolinecolor =
+          '#555'
+        layout.plot_bgcolor = layout.paper_bgcolor = '#121212'
         layout.font = { color: '#fff' }
       }
 
