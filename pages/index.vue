@@ -76,6 +76,7 @@
           dense
           show-select
           :search="search"
+          :page.sync="page"
           :footer-props="{
             'items-per-page-options': [10, 25, 50, 100, -1]
           }"
@@ -105,6 +106,7 @@ export default {
       years: [],
       rankExtent: [],
       search: '',
+      page: 1,
       tableHeaders: [
         { text: 'Name', value: 'name' },
         { text: 'Rank', value: 'rank' },
@@ -126,6 +128,7 @@ export default {
   methods: {
     init() {
       this.selected.rows = [this.subsetByYear[0], this.subsetByYear[1]]
+      this.page = 1
     },
     toggleChartTheme() {
       this.chartTheme = this.chartTheme === 'dark' ? 'light' : 'dark'
